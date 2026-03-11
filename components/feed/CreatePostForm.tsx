@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useCreatePost } from "@/hooks/use-posts";
+import { useCreatePost } from "@/hooks/usePosts";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,7 +25,7 @@ export function CreatePostForm({ username }: CreatePostFormProps) {
           setTitle("");
           setContent("");
         },
-      }
+      },
     );
   };
 
@@ -35,7 +35,9 @@ export function CreatePostForm({ username }: CreatePostFormProps) {
   return (
     <div className="overflow-hidden rounded-2xl border border-[#CCCCCC] bg-white shadow-sm">
       <div className="bg-[#7695EC] px-6 py-5">
-        <h2 className="text-lg font-bold text-white">What&apos;s on your mind?</h2>
+        <h2 className="text-lg font-bold text-white">
+          What&apos;s on your mind?
+        </h2>
       </div>
       <div className="flex flex-col gap-4 px-6 py-6">
         <div className="flex flex-col gap-1.5">

@@ -1,12 +1,8 @@
 "use client";
 
-import { useDeletePost } from "@/hooks/use-posts";
+import { useDeletePost } from "@/hooks/usePosts";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 interface DeleteConfirmModalProps {
   postId: number;
@@ -39,7 +35,9 @@ export function DeleteConfirmModal({
           </DialogTitle>
         </div>
         <div className="flex flex-col gap-6 px-6 py-6">
-          <p className="text-sm">Are you sure you want to delete this item?</p>
+          <p className="text-sm text-muted-foreground">
+            Are you sure you want to delete this item?
+          </p>
           <div className="flex justify-end gap-3">
             <Button
               variant="outline"

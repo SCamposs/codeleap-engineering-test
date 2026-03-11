@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { postsService } from "@/services/posts-service";
+import { postsService } from "@/services/postsService";
 import type { CreatePostPayload, UpdatePostPayload } from "@/types/post";
 
 const POSTS_KEY = ["posts"] as const;

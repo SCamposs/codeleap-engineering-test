@@ -1,16 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useUpdatePost } from "@/hooks/use-posts";
+import { useUpdatePost } from "@/hooks/usePosts";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import type { Post } from "@/types/post";
 
 interface EditPostModalProps {
@@ -35,7 +31,7 @@ export function EditPostModal({ post, open, onOpenChange }: EditPostModalProps) 
     if (!title.trim() || !content.trim()) return;
     updatePost(
       { id: post.id, payload: { title: title.trim(), content: content.trim() } },
-      { onSuccess: () => onOpenChange(false) }
+      { onSuccess: () => onOpenChange(false) },
     );
   };
 
